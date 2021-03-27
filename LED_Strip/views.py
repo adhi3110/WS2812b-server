@@ -35,3 +35,7 @@ def senddata(request):
     y = Colour.objects.get(name='LED_Strip study table')
     data = serialize("json", [y])
     return HttpResponse(data, content_type="application/json")
+
+
+def sendhello(request):
+    return HttpResponse("Hello")
