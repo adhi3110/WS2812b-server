@@ -7,7 +7,8 @@ from rest_framework import viewsets
 from rest_framework import permissions
 from django.core.serializers import serialize
 from .LED_paterns import *
-
+from multiprocessing import Process
+import threading
 
 
 def updatergb(request):
@@ -38,7 +39,12 @@ def senddata(request):
     return HttpResponse(data, content_type="application/json")
 
 
+def sendok():
+    return HttpResponse("Working1")
+
+
 def senddaa(request):
-    temp = sendhello()
-    return HttpResponse(temp)
+    p = Process(target=sendhello)
+    p.start()
+    return HttpResponse("Working1")
 

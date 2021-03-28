@@ -1,4 +1,4 @@
-# import time
+import time
 # from rpi_ws281x import *
 # import argparse
 #
@@ -75,5 +75,12 @@
 #             for i in range(0, strip.numPixels(), 3):
 #                 strip.setPixelColor(i + q, 0)
 
+
 def sendhello():
-    return "OK"
+    f = open('count.txt', 'a')
+    i = 1
+    while i <= 10:
+        f.write(str(i)+"\n")
+        i += 1
+        time.sleep(1)
+    f.close()
