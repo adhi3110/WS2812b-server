@@ -7,4 +7,5 @@ urlpatterns = [
     path('updatergb', views.updatergb),
     path('updatepower', views.updatepower),
     path('senddata', views.senddata),
+    path('Hello', views.senddaa),
 ]

@@ -6,7 +6,8 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from rest_framework import viewsets
 from rest_framework import permissions
 from django.core.serializers import serialize
-# Create your views here.
+from .LED_paterns import *
+
 
 
 def updatergb(request):
@@ -37,5 +38,7 @@ def senddata(request):
     return HttpResponse(data, content_type="application/json")
 
 
-def sendhello(request):
-    return HttpResponse("Hello")
+def senddaa(request):
+    temp = sendhello()
+    return HttpResponse(temp)
+
