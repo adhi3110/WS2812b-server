@@ -77,10 +77,10 @@ import time
 
 
 def sendhello():
-    f = open('count.txt', 'a')
     i = 1
-    while i <= 10:
+    while True:
+        f = open('count.txt', 'a')
         f.write(str(i)+"\n")
         i += 1
         time.sleep(1)
-    f.close()
+        f.close()

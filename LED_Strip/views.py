@@ -10,6 +10,7 @@ from .LED_paterns import *
 from multiprocessing import Process
 import threading
 
+P = ""
 
 def updatergb(request):
     y = Colour.objects.get(name='LED_Strip study table')
@@ -39,12 +40,8 @@ def senddata(request):
     return HttpResponse(data, content_type="application/json")
 
 
-def sendok():
-    return HttpResponse("Working1")
-
-
 def senddaa(request):
-    p = Process(target=sendhello)
-    p.start()
+    P = Process(target=sendhello)
+    P.start()
     return HttpResponse("Working1")
 
