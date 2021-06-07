@@ -10,7 +10,7 @@ from .LED_paterns import *
 from multiprocessing import Process
 import threading
 import time
-#from rpi_ws281x import *
+from rpi_ws281x import *
 import argparse
 
 Y = " "
